@@ -149,7 +149,7 @@ async def on_message(message: discord.Message):
       'delulu': [custom_emoji["pat_delulu_cat"]],
   }
   
-  if message.guild.id is 869022453903548456: # Tiff Server Reacts
+  if message.guild.id == 869022453903548456: # Tiff Server Reacts
     for regex, reacts in tyfficult_reacts.items():
       if re.search(regex, "".join(message.content.lower().split())) is not None:
         for react in reacts:
