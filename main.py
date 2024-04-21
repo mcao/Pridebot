@@ -93,13 +93,6 @@ async def on_message(message: discord.Message):
       'yee+t': [custom_emoji["blahajyeet"]],
       'holyfruit': [custom_emoji["melonblahaj"]],
       'bequiet': ["🤫"],
-      'neel': [custom_emoji["spaceblahaj"]],
-      'tiff': [custom_emoji["pat_tiffany"], custom_emoji["royalblahaj"]],
-      'alice': [custom_emoji["sussy"], "🫡"],
-      'sus': [custom_emoji["sussy"]],
-      'lfg': [custom_emoji["lfg"]],
-      'boba': [custom_emoji["boba"]],
-      'bubbletea': [custom_emoji["boba"]],
       'blahaj': [custom_emoji["justblahaj"]],
       'shark': [custom_emoji["justblahaj"]],
       'uwu': [custom_emoji["blahajuwu"]],
@@ -110,13 +103,15 @@ async def on_message(message: discord.Message):
       'dance': [custom_emoji["blobdance"]],
       'code': [custom_emoji["meow_code"]],
       'hack': [custom_emoji["meow_code"]],
-      'cat': [custom_emoji["pat_delulu_cat"], custom_emoji["meow_heart"]],
-      'kitty': [custom_emoji["pat_delulu_cat"], custom_emoji["meow_heart"]],
-      'meow': [custom_emoji["pat_delulu_cat"], custom_emoji["meow_heart"]],
-      'cute': [custom_emoji["pat_delulu_cat"]],
-      'delulu': [custom_emoji["pat_delulu_cat"]],
       'sus': [custom_emoji["susblahaj"]],
+      'neel': [custom_emoji["spaceblahaj"]],
+      'tiff': [custom_emoji["pat_tiffany"], custom_emoji["royalblahaj"]],
+      'sus': [custom_emoji["sussy"]],
+      'lfg': [custom_emoji["lfg"]],
+      'boba': [custom_emoji["boba"]],
+      'bubbletea': [custom_emoji["boba"]],
   }
+
   for regex, reacts in word_reacts.items():
     if re.search(regex, "".join(message.content.lower().split())) is not None:
       for react in reacts:
@@ -142,7 +137,23 @@ async def on_message(message: discord.Message):
     if substr in words:
       for react in reacts:
         await message.add_reaction(react)
-
+  
+  tyfficult_reacts = {
+      'alice': [custom_emoji["sussy"], "🫡"],
+      'brian': ["🥶"],
+      'meryl': [custom_emoji["boba_2"]],
+      'cat': [custom_emoji["pat_delulu_cat"], custom_emoji["meow_heart"]],
+      'kitty': [custom_emoji["pat_delulu_cat"], custom_emoji["meow_heart"]],
+      'meow': [custom_emoji["pat_delulu_cat"], custom_emoji["meow_heart"]],
+      'cute': [custom_emoji["pat_delulu_cat"]],
+      'delulu': [custom_emoji["pat_delulu_cat"]],
+  }
+  
+  if message.guild.id == "869022453903548456": # Tiff Server Reacts
+    for regex, reacts in tyfficult_reacts.items():
+      if re.search(regex, "".join(message.content.lower().split())) is not None:
+        for react in reacts:
+          await message.add_reaction(react)
 
 token = os.environ['TOKEN']
 bot.run(token)
