@@ -110,9 +110,11 @@ async def on_message(message: discord.Message):
       'dance': [custom_emoji["blobdance"]],
       'code': [custom_emoji["meow_code"]],
       'hack': [custom_emoji["meow_code"]],
-      'cat': [custom_emoji["meow_heart"]],
-      'kitty': [custom_emoji["meow_heart"]],
-      'meow': [custom_emoji["meow_heart"]],
+      'cat': [custom_emoji["pat_delulu_cat"], custom_emoji["meow_heart"]],
+      'kitty': [custom_emoji["pat_delulu_cat"], custom_emoji["meow_heart"]],
+      'meow': [custom_emoji["pat_delulu_cat"], custom_emoji["meow_heart"]],
+      'cute': [custom_emoji["pat_delulu_cat"]],
+      'delulu': [custom_emoji["pat_delulu_cat"]],
       'sus': [custom_emoji["susblahaj"]],
   }
   for regex, reacts in word_reacts.items():
