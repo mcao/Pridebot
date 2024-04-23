@@ -141,7 +141,7 @@ async def on_message(message: discord.Message):
   tyfficult_reacts = {
       'alice': [custom_emoji["sussy"], "🫡", custom_emoji["kirbycry"]],
       'brian': ["🥶"],
-      'meryl': [custom_emoji["boba_2"]],
+      'meryl': [custom_emoji["boba_2"], "😲"],
       'cat': [custom_emoji["pat_delulu_cat"], custom_emoji["meow_heart"]],
       'kitty': [custom_emoji["pat_delulu_cat"], custom_emoji["meow_heart"]],
       'meow': [custom_emoji["pat_delulu_cat"], custom_emoji["meow_heart"]],
