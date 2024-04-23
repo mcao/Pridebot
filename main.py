@@ -139,7 +139,7 @@ async def on_message(message: discord.Message):
         await message.add_reaction(react)
   
   tyfficult_reacts = {
-      'alice': [custom_emoji["sussy"], "🫡"],
+      'alice': [custom_emoji["sussy"], "🫡", custom_emoji["kirbycry"]],
       'brian': ["🥶"],
       'meryl': [custom_emoji["boba_2"]],
       'cat': [custom_emoji["pat_delulu_cat"], custom_emoji["meow_heart"]],
@@ -147,6 +147,9 @@ async def on_message(message: discord.Message):
       'meow': [custom_emoji["pat_delulu_cat"], custom_emoji["meow_heart"]],
       'cute': [custom_emoji["pat_delulu_cat"]],
       'delulu': [custom_emoji["pat_delulu_cat"]],
+      'tomato': ["🍅"],
+      'tomadto': ["🍅"],
+      'tommy': ["🍅"],
   }
   
   if message.guild.id == 869022453903548456: # Tiff Server Reacts
